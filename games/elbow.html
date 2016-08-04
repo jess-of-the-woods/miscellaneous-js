@@ -1,0 +1,45 @@
+<html>
+<body>
+<title>The Elbow Pimple game</title>
+<header><h2>The Elbow Pimple Game</h2></header>
+<script>
+var user = prompt("You spot a pimple on your best friends elbow, Do you SQUEEZE it, SHOUT at them or VOMIT?").toLowerCase();
+
+switch(user) {
+    case 'squeeze':
+        var squeezeStrength = prompt("Did you squeeze hard or soft?").toLowerCase();
+        var squeezeEnjoyment = prompt("Did you enjoy it ALOT or a LITTLE?").toLowerCase();
+        if (squeezeStrength === 'hard' && squeezeEnjoyment === 'alot') {
+            alert("You muscly perverted thing you!");
+        }
+        else {
+            alert("Oh well, better luck next time :)")
+        }
+        break;
+    case 'shout':
+      alert("Ah! A rationalist! Very good, shouting will get you what you want!");
+      var shoutVolume = prompt("Did you shout LOUD or SOFTLY?").toLowerCase();
+      var shoutContent = prompt("Did you shout 'SHIT' or 'OH MY'?").toLowerCase();
+      if (shoutVolume === 'loud' || shoutContent === 'shit') {
+          alert("Well done! That was very obnoxious!");
+      }
+      else {
+          alert("Well, I think your shouting needs a bit more practice to be honest")
+      }
+      break;
+    case 'vomit':
+      alert("Ah! Now doesn't that feel better?");
+      var vomitPower = prompt("Was it a POWERFUL chuck, or POWERLESS?").toLowerCase();
+      if (vomitPower === 'powerful') {
+        alert("Amazing my friend!")
+      }
+      else {
+        alert("Perhaps your power will increase with age.. One can only hope.")
+      }
+      break;
+    default:
+        alert("What! How dare you refuse to play my game!");
+}
+</script>
+</body>
+</html>
