@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<p id="demo"></p>
+<p id='yea'>
+
+</p>
+<style>
+body {background:#464740;color:#d3d3d3;}
+</style>
+<script>
+
+  // console.log(this); // window
+
+  function myFunction(name) {
+      return "Hello " + name + ', here is the output of some code';
+  }
+  document.getElementById("demo").innerHTML = myFunction("Jess Stoo");
+
+  var myObject = {
+      firstName:"Jess",
+      lastName: "Stuu",
+      fullName: function (){
+          return this.firstName + " " + this.lastName + ' ' + this
+      }
+  }
+  // document.getElementById("demo").innerHTML = myObject.fullName();
+
+  function yea(){
+    return this
+  }
+  // document.getElementById("demo").innerHTML = yea()
+
+</script>
+
+</body>
+</html>

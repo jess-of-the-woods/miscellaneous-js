@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener Practice..</title>
+    <style type="text/css">
+        body {
+            background-color: #b9b9b9;
+        }
+        #theDiv {
+            background-color: #999722;
+            /*margin: auto;*/
+            height: 80%;
+            width: 70%;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);    
+        }
+        #theDiv.toggled {
+            background-color: #b9b9b9;
+        }
+        body .toggled {
+            background-color: #999722;
+        }
+    </style>
+</head>
+<body>
+    <div id="theDiv">
+        <h2 id="headerID">Click anywhere to change background color.</h2>
+        <hr>
+        <button>Button (doesn't do anything yet)</button>
+        <p id="main"></p>
+    </div>
+    <button id="reloadPlz">Reload page plz</button>
+    <script>
+        // listener
+        document.getElementById("theDiv").addEventListener("click", changeColor, false);
+ 
+        function changeColor() {
+            var theDiv = document.getElementById("theDiv");
+            if (theDiv.className != 'toggled') {
+                theDiv.className = 'toggled';
+            }
+            else {
+                theDiv.className = ""
+            }
+/*            document.body.style.backgroundColor = "#999722";
+            theDiv.style.backgroundColor = "#b9b9b9";
+            document.getElementById("main").innerHTML = "<strong>Been doing some clicking aye?</strong>";
+*/        }
+
+        document.getElementById('headerID').addEventListener("click", addSomeText, false);
+
+        function addSomeText () {
+			document.getElementById('headerID').innerHTML = " Wow, you've changed the heading! I suppose you better reload the page";
+            document.getElementById('main').innerHTML = " New Heading!! Bam!!"        	
+        }
+        // listener
+        document.getElementById('reloadPlz').addEventListener("click", myReloadFunction, true);
+
+        function myReloadFunction () {
+            window.location.reload(true);
+        }
+    </script>
+</body>
+</html>
